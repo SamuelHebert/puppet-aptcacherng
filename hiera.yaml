@@ -1,0 +1,12 @@
+---
+version: 5
+defaults:
+  datadir: data
+  data_hash: yaml_data
+hierarchy:
+  - name: "Distro-version dependent"
+    path: "%{facts.os.family}-%{facts.os.distro.codename}.yaml"
+  - name: "Distro dependent"
+    path: "%{facts.os.family}.yaml"
+  - name: "Common"
+    path: "common.yaml"

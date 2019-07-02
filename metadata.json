@@ -1,29 +1,25 @@
 {
-  "name": "markhellewell-aptcacherng",
+  "name": "itbane-aptcacherng",
   "version": "1.0.1",
-  "author": "markhellewell",
+  "author": "itbane",
   "summary": "Install and configure an apt-cacher-ng server.",
-  "license": "BSD-2-Clause",
-  "source": "git@github.com:markhellewell/puppet-aptcacherng.git",
-  "project_page": "https://github.com/markhellewell/puppet-aptcacherng",
-  "issues_url": "https://github.com/markhellewell/puppet-aptcacherng/issues",
+  "license": "gpl",
+  "source": "git@github.com:itbane/puppet-aptcacherng.git",
+  "project_page": "https://github.com/itbane/puppet-aptcacherng",
+  "issues_url": "https://github.com/itbane/puppet-aptcacherng/issues",
   "description": "The aptcacherng module permits management of\n    an apt-cacher-ng caching proxy service.",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "v4.25.1"
+    }
+  ],
   "operatingsystem_support": [
     {
-    "operatingsystem": "Ubuntu",
-    "operatingsystemrelease": [
-      "14.04",
-      "12.04",
-      "10.04"
-      ]
-    },
     {
     "operatingsystem": "Debian",
     "operatingsystemrelease": [
-      "8",
-      "7",
-      "6"
+      "9"
       ]
     }
   ],
