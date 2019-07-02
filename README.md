@@ -1,10 +1,5 @@
 # aptcacherng
 
-[![Puppet Forge Version](http://img.shields.io/puppetforge/v/markhellewell/aptcacherng.svg)](https://forge.puppetlabs.com/markhellewell/aptcacherng)
-[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/markhellewell/aptcacherng.svg)](https://forge.puppetlabs.com/markhellewell/aptcacherng)
-[![Build Status](https://img.shields.io/travis/markhellewell/puppet-aptcacherng/master.svg)](https://travis-ci.org/markhellewell/puppet-aptcacherng)
-[![Puppet Forge Score](https://img.shields.io/puppetforge/f/markhellewell/aptcacherng.svg)](https://forge.puppetlabs.com/markhellewell/aptcacherng)
-
 #### Table of Contents
 
 1. [Overview](#overview)
