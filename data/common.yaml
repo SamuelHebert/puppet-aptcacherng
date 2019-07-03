@@ -1,3 +1,4 @@
+aptcacherng::package_ensure: 'present'
 aptcacherng::supportdir: ~
 aptcacherng::bindaddress: ~
 aptcacherng::proxy: ~
