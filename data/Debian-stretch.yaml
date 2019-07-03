@@ -1,4 +1,4 @@
-aptcacherng::package: 'apt-cacher-ng'
+aptcacherng::package_name: 'apt-cacher-ng'
 aptcacherng::cachedir: '/var/cache/apt-cacher-ng'
 aptcacherng::logdir: '/var/log/apt-cacher-ng'
 aptcacherng::extreshold: 4
