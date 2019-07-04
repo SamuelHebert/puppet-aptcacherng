@@ -16,7 +16,6 @@
   ],
   "operatingsystem_support": [
     {
-    {
     "operatingsystem": "Debian",
     "operatingsystemrelease": [
       "9"
