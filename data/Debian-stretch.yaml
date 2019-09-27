@@ -1,9 +1,0 @@
-aptcacherng::package_name: 'apt-cacher-ng'
-aptcacherng::cachedir: '/var/cache/apt-cacher-ng'
-aptcacherng::logdir: '/var/log/apt-cacher-ng'
-aptcacherng::extreshold: 4
-aptcacherng::port: 3142
-aptcacherng::service_ensure: 'running'
-aptcacherng::service_enable: true
-aptcacherng::reportpage: 'acng-report.html'
-

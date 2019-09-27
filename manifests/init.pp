@@ -5,7 +5,7 @@
 #
 # === Parameters
 #
-# [*packagename*]
+# [*package_name*]
 #   Apt-cacher-ng package name.
 #   (undef correspond to 'apt-cacher-ng' on Debian osfamily)
 #   Defaults: undef
@@ -368,60 +368,10 @@ class aptcacherng (
   ) {
 
   contain aptcacherng::install
+  contain aptcacherng::config
+  contain aptcacherng::service
 
-  file {$cachedir:
-    ensure  => directory,
-    owner   => 'apt-cacher-ng',
-    group   => 'apt-cacher-ng',
-    mode    => '2755',
-  }
-
-  file {$logdir:
-    ensure  => directory,
-    owner   => 'apt-cacher-ng',
-    group   => 'apt-cacher-ng',
-    mode    => '2755',
-  }
-
-  file {'/etc/apt-cacher-ng/acng.conf':
-    content => template('aptcacherng/acng.conf.erb'),
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    require => Package['apt-cacher-ng'],
-  }
-
-  file {'/etc/apt-cacher-ng/zz_debconf.conf':
-    ensure => absent,
-  }
-
-  if $max_files != undef {
-    file {'/etc/security/limits.d/apt-cacher-ng':
-      content => template('aptcacherng/apt-cacher-ng_limits.erb'),
-      owner   => 'root',
-      group   => 'root',
-      mode    => '0644',
-    }
-  } else {
-    file {'/etc/security/limits.d/apt-cacher-ng':
-      ensure => absent
-    }
-  }
-
-  service {'apt-cacher-ng':
-    ensure    => $service_ensure,
-    enable    => $service_enable,
-    subscribe => [File['/etc/apt-cacher-ng/acng.conf'],
-                  File['/etc/apt-cacher-ng/zz_debconf.conf']],
-  }
-
-  if $auth_username {
-    file {'/etc/apt-cacher-ng/security.conf':
-      content => template('aptcacherng/security.conf.erb'),
-      owner   => 'apt-cacher-ng',
-      group   => 'apt-cacher-ng',
-      mode    => '0600',
-    }
-  }
-
+  Class['aptcacherng::install']
+  -> Class['aptcacherng::config']
+  ~> Class['aptcacherng::service']
 }

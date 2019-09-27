@@ -24,7 +24,7 @@ Use of `aptcacherng` causes installation of the `apt-cacher-ng` package, generat
 
 Quickest way to get an apt caching proxy using defaults:
 
-    class {'aptcacherng':}
+    include aptcacherng
 
 This will apply all resources and leave you with `apt-cacher-ng` running on port `3142`.
 
@@ -47,12 +47,9 @@ Simply declaring the `aptcacherng` class for a node, will apply the class using 
 Or, in a YAML hiera data source—for example—you could make use of automatic parameter lookups like so:
 
     ---
-    classes:
-      - aptcacherng
-
     aptcacherng::cachedir: "/data/apt/apt-cacher-ng"
 
-If you wish to make `aptcacherng` install a specific `apt-cacher-ng` package, you may pass the `packagename` string parameter when declaring the class.
+If you wish to make `aptcacherng` install a specific `apt-cacher-ng` package, you may pass the `package_name` string parameter when declaring the class.
 
 If you're using the `puppetlabs-apt` module, telling `apt` to use your `apt-cacher-ng` service is simple.  For example:
 
@@ -67,4 +64,6 @@ Only debian based distributions are currently supported.
 
 ## Development
 
-Development takes place in the [puppet-aptcacherng](https://github.com/markhellewell/puppet-aptcacherng) GitHub repository.  Pull Requests happily accepted.
+Development takes place in the [puppet-aptcacherng](https://github.com/itbane/puppet-aptcacherng) GitHub repository.  Pull Requests happily accepted.
+
+Original Work at (https://github.com/markhellewell/aptcacherng). Forked due to missing repo.
