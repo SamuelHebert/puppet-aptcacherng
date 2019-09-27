@@ -8,3 +8,5 @@ Thanks to the following people for providing fixes and/or features:
 * Nicholas Hinds, nhinds, workaround for apt-cacher-ng bug ignoring CacheDir setting
 * Hannes Schaller, cyberkov, add PassThroughPattern support
 * Brian Flad, bflad, add support for setting of max files on Linux
+
+Thanks to markhallewell for the basis of this module

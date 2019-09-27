@@ -1,13 +1,12 @@
 {
   "name": "itbane-aptcacherng",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "itbane",
   "summary": "Install and configure an apt-cacher-ng server.",
-  "license": "gpl",
+  "license": "BSD-2-Clause",
   "source": "git@github.com:itbane/puppet-aptcacherng.git",
   "project_page": "https://github.com/itbane/puppet-aptcacherng",
   "issues_url": "https://github.com/itbane/puppet-aptcacherng/issues",
-  "description": "The aptcacherng module permits management of\n    an apt-cacher-ng caching proxy service.",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
@@ -16,11 +15,26 @@
   ],
   "operatingsystem_support": [
     {
-    "operatingsystem": "Debian",
-    "operatingsystemrelease": [
-      "9"
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9"
       ]
     }
   ],
-  "tags": ["apt", "packaging", "cache", "apt-cacher-ng"]
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "description": "The aptcacherng module permits management of\n    an apt-cacher-ng caching proxy service.",
+  "tags": [
+    "apt",
+    "packaging",
+    "cache",
+    "apt-cacher-ng"
+  ],
+  "pdk-version": "1.10.0",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git#1.10.0",
+  "template-ref": "1.10.0-0-gbba9ac3"
 }

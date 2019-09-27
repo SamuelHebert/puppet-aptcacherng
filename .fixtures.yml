@@ -1,3 +1,7 @@
 fixtures:
   symlinks:
     "aptcacherng": "#{source_dir}"
+  forge_modules:
+    stdlib:
+      repo: "puppetlabs/stdlib"
+      ref: '4.25.1'

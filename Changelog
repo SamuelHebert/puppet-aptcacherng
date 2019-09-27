@@ -1,3 +1,7 @@
+1.0.3
+===
+Make PDK compatible & fix unit tests
+
 1.0.2
 ===
 Changed module to Puppet 4 pragma:

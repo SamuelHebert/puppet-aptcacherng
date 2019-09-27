@@ -1,17 +1,69 @@
 # Private config class for aptcacherng, do not use directly!
 class aptcacherng::config {
+# get parameters used in config templates from main class
+  $allowuserports = $aptcacherng::allowuserports
+  $auth_password = $aptcacherng::auth_password
+  $auth_username = $aptcacherng::auth_username
+  $bindaddress = $aptcacherng::bindaddress
+  $cachedir = $aptcacherng::cachedir
+  $connectproto = $aptcacherng::connectproto
+  $debug = $aptcacherng::debug
+  $dirperms = $aptcacherng::dirperms
+  $dnscacheseconds = $aptcacherng::dnscacheseconds
+  $dontcache = $aptcacherng::dontcache
+  $dontcacherequested = $aptcacherng::dontcacherequested
+  $dontcacheresolved = $aptcacherng::dontcacheresolved
+  $exabortonproblems = $aptcacherng::exabortonproblems
+  $exposeorigin = $aptcacherng::exposeorigin
+  $extreshold = $aptcacherng::extreshold
+  $fileperms = $aptcacherng::fileperms
+  $forcemanaged = $aptcacherng::forcemanaged
+  $foreground = $aptcacherng::foreground
+  $forwardbtssoap = $aptcacherng::forwardbtssoap
+  $freshindexmaxage = $aptcacherng::freshindexmaxage
+  $keepextraversions = $aptcacherng::keepextraversions
+  $localdirs = $aptcacherng::localdirs
+  $logdir = $aptcacherng::logdir
+  $logsubmittedorigin = $aptcacherng::logsubmittedorigin
+  $maxconthreads = $aptcacherng::maxconthreads
+  $max_files = $aptcacherng::max_files
+  $maxstandbyconthreads = $aptcacherng::maxstandbyconthreads
+  $networktimeout = $aptcacherng::networktimeout
+  $offlinemode = $aptcacherng::offlinemode
+  $passthroughpattern = $aptcacherng::passthroughpattern
+  $pfilepattern = $aptcacherng::pfilepattern
+  $pidfile = $aptcacherng::pidfile
+  $port = $aptcacherng::port
+  $precachefor = $aptcacherng::precachefor
+  $proxy = $aptcacherng::proxy
+  $recompbz2 = $aptcacherng::recompbz2
+  $redirmax = $aptcacherng::redirmax
+  $remap_lines = $aptcacherng::remap_lines
+  $reportpage = $aptcacherng::reportpage
+  $requestappendix = $aptcacherng::requestappendix
+  $socketpath = $aptcacherng::socketpath
+  $stupidfs = $aptcacherng::stupidfs
+  $supportdir = $aptcacherng::supportdir
+  $unbufferlogs = $aptcacherng::unbufferlogs
+  $useragent = $aptcacherng::useragent
+  $usewrap = $aptcacherng::usewrap
+  $verboselog = $aptcacherng::verboselog
+  $vfilepattern = $aptcacherng::vfilepattern
+  $vfileuserangeops = $aptcacherng::vfileuserangeops
+  $wfilepattern = $aptcacherng::wfilepattern
+
   file {$aptcacherng::cachedir:
-    ensure  => directory,
-    owner   => 'apt-cacher-ng',
-    group   => 'apt-cacher-ng',
-    mode    => '2755',
+    ensure => directory,
+    owner  => 'apt-cacher-ng',
+    group  => 'apt-cacher-ng',
+    mode   => '2755',
   }
 
   file {$aptcacherng::logdir:
-    ensure  => directory,
-    owner   => 'apt-cacher-ng',
-    group   => 'apt-cacher-ng',
-    mode    => '2755',
+    ensure => directory,
+    owner  => 'apt-cacher-ng',
+    group  => 'apt-cacher-ng',
+    mode   => '2755',
   }
 
   file {'/etc/apt-cacher-ng/acng.conf':
