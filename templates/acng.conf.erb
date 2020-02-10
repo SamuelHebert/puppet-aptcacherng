@@ -191,6 +191,21 @@ PfilePattern: <%= @pfilepattern %>
 <% if @wfilepattern %>
 WfilePattern: <%= @wfilepattern %>
 <% end %>
+<% if @vfilepatternex -%>
+VfilePatternEx: <%= @vfilepatternex %>
+<% else -%>
+VfilePatternEx:
+<% end -%>
+<% if @pfilepatternex -%>
+PfilePatternEx: <%= @pfilepatternex %>
+<% else -%>
+PfilePatternEx:
+<% end -%>
+<% if @wfilepatternex -%>
+WfilePatternEx: <%= @wfilepatternex %>
+<% else -%>
+WfilePatternEx:
+<% end -%>
 
 # Higher modes only working with the debug version
 # Warning, writes a lot into apt-cacher.err logfile
