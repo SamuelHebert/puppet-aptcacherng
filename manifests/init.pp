@@ -114,13 +114,16 @@
 #   Default: undef
 #
 # [*vfilepattern*]
+# [*vfilepatternex*]
 #   Pigeonholing files with regular expressions (static/volatile). Can be
 #   overridden here but not should not be done permanently because future
 #   update of default settings would not be applied later.
 #   Default: undef
 #
 # [*pfilepattern*]
+# [*pfilepatternex*]
 # [*wfilepattern*]
+# [*wfilepatternex*]
 #   Whitelist for expiration, file types not to be removed even when being
 #   unreferenced. Default: many parts from VfilePattern where no parent index
 #   exists or might be unknown.
@@ -336,8 +339,11 @@ class aptcacherng (
   Optional                       $maxstandbyconthreads,
   Optional                       $maxconthreads,
   Optional                       $vfilepattern,
+  Optional[String]               $vfilepatternex,
   Optional                       $pfilepattern,
+  Optional[String]               $pfilepatternex,
   Optional                       $wfilepattern,
+  Optional[String]               $wfilepatternex,
   Optional                       $debug,
   Optional                       $exposeorigin,
   Optional                       $logsubmittedorigin,

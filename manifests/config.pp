@@ -32,6 +32,7 @@ class aptcacherng::config {
   $offlinemode = $aptcacherng::offlinemode
   $passthroughpattern = $aptcacherng::passthroughpattern
   $pfilepattern = $aptcacherng::pfilepattern
+  $pfilepatternex = $aptcacherng::pfilepatternex
   $pidfile = $aptcacherng::pidfile
   $port = $aptcacherng::port
   $precachefor = $aptcacherng::precachefor
@@ -49,8 +50,10 @@ class aptcacherng::config {
   $usewrap = $aptcacherng::usewrap
   $verboselog = $aptcacherng::verboselog
   $vfilepattern = $aptcacherng::vfilepattern
+  $vfilepatternex = $aptcacherng::vfilepatternex
   $vfileuserangeops = $aptcacherng::vfileuserangeops
   $wfilepattern = $aptcacherng::wfilepattern
+  $wfilepatternex = $aptcacherng::wfilepatternex
 
   file {$aptcacherng::cachedir:
     ensure => directory,
