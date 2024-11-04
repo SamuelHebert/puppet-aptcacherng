@@ -12,7 +12,7 @@ aptcacherng::dontcacherequested: ~
 aptcacherng::dontcacheresolved: ~
 aptcacherng::exabortonproblems: ~
 aptcacherng::exposeorigin: ~
-aptcacherng::extreshold: 4
+aptcacherng::exthreshold: 4
 aptcacherng::fileperms: ~
 aptcacherng::forcemanaged: ~
 aptcacherng::foreground: ~

@@ -78,7 +78,7 @@
 #   backends (.where)
 #   Default: undef
 #
-# [*extreshold*]
+# [*exthreshold*]
 #   Days before considering an unreferenced file expired (to be deleted).
 #   (integer) Default: 4
 #
@@ -314,7 +314,7 @@
 class aptcacherng (
   Optional[Stdlib::Absolutepath] $cachedir,
   Optional[Stdlib::Absolutepath] $logdir,
-  Integer                        $extreshold,
+  Integer                        $exthreshold,
   Integer                        $port,
   String                         $service_ensure,
   Boolean                        $service_enable,

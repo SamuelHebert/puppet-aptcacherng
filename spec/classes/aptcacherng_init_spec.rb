@@ -35,7 +35,7 @@ describe 'aptcacherng', type: :class do
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^LogDir: \/var\/log\/apt-cacher-ng$}) }
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^Port: 3142$}) }
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^ReportPage: acng-report.html$}) }
-      it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^ExTreshold: 4$}) }
+      it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^ExThreshold: 4$}) }
       it { is_expected.not_to contain_file('/etc/apt-cacher-ng/security.conf') }
     end # with default params
 
@@ -61,7 +61,7 @@ describe 'aptcacherng', type: :class do
           pidfile: '/srv/apt-cacher-ng/pid',
           offlinemode: '0',
           forcemanaged: '1',
-          extreshold: 4,
+          exthreshold: 4,
           exabortonproblems: '30',
           stupidfs: '1',
           forwardbtssoap: '0',
@@ -115,7 +115,7 @@ describe 'aptcacherng', type: :class do
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^PidFile: #{params_set[:pidfile]}$}) }
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^OfflineMode: #{params_set[:offlinemode]}$}) }
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^ForceManaged: #{params_set[:forcemanaged]}$}) }
-      it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^ExTreshold: #{params_set[:extreshold]}$}) }
+      it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^ExThreshold: #{params_set[:exthreshold]}$}) }
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^ExAbortOnProblems: #{params_set[:exabortonproblems]}$}) }
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^StupidFs: #{params_set[:stupidfs]}$}) }
       it { is_expected.to contain_file('/etc/apt-cacher-ng/acng.conf').with_content(%r{^ForwardBtsSoap: #{params_set[:forwardbtssoap]}$}) }

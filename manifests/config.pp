@@ -15,7 +15,7 @@ class aptcacherng::config {
   $dontcacheresolved = $aptcacherng::dontcacheresolved
   $exabortonproblems = $aptcacherng::exabortonproblems
   $exposeorigin = $aptcacherng::exposeorigin
-  $extreshold = $aptcacherng::extreshold
+  $exthreshold = $aptcacherng::exthreshold
   $fileperms = $aptcacherng::fileperms
   $forcemanaged = $aptcacherng::forcemanaged
   $foreground = $aptcacherng::foreground

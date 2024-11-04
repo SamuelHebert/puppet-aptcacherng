@@ -36,7 +36,7 @@ Simply declaring the `aptcacherng` class for a node, will apply the class using 
 * LogDir: /var/log/apt-cacher-ng
 * Port: 3142
 * ReportPage: acng-report.html
-* ExTreshold: 4
+* ExThreshold: 4
 
 *All* `apt-cacher-ng` config file directives are available as parameters to the `aptcacherng` class.  For example, to change the directory where `apt-cacher-ng` will store its cache:
 
